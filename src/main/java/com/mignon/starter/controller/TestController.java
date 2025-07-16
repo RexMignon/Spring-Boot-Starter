@@ -4,6 +4,7 @@ package com.mignon.starter.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,8 +20,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
 
-        @GetMapping("/frist")
-    public String mySpringBootStart(){
+        @GetMapping("/{id}")
+    public String mySpringBootStart(
+            @PathVariable Integer id
+        ){
+            System.out.println("id => "+id);
             return "hello SpringBoot";
         }
 
