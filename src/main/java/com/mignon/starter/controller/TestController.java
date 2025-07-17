@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class TestController {
 
-    private final UserService userService;
 
         @GetMapping("/{id}")
     public String mySpringBootStart(
