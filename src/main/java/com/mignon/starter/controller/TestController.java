@@ -1,6 +1,7 @@
 package com.mignon.starter.controller;
 
 
+import com.mignon.starter.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class TestController {
 
+    private final UserService userService;
 
         @GetMapping("/{id}")
     public String mySpringBootStart(
@@ -27,6 +29,8 @@ public class TestController {
             System.out.println("id => "+id);
             return "hello SpringBoot";
         }
+
+
 
 
 }
