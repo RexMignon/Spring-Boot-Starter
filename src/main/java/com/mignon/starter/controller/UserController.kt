@@ -20,7 +20,6 @@ class UserController(private val userService: UserService) {
 
     @PostMapping("/springboot")
     fun test(@Valid @RequestBody userDTO: UserDTO): String {
-        println(userService.javaClass)
         userService.sayHello()
         println(userDTO.age)
         println(userDTO.name)
