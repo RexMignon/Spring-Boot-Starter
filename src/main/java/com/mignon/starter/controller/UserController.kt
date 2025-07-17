@@ -18,9 +18,9 @@ import org.springframework.web.bind.annotation.RestController
 class UserController(private val userService: UserService) {
 
 
-
     @PostMapping("/springboot")
     fun test(@Valid @RequestBody userDTO: UserDTO): String {
+        println(userService.javaClass)
         userService.sayHello()
         println(userDTO.age)
         println(userDTO.name)
@@ -33,4 +33,5 @@ class UserController(private val userService: UserService) {
     fun getUserByIdAlias(@PathVariable id: Long): String {
         return "Fetching user with ID (alias): $id"
     }
+
 }

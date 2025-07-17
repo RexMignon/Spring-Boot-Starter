@@ -1,0 +1,7 @@
+spring.application.name=starter
+# server port
+server.port=80
+# server path such as 127.0.0.1/ if this field value=/start then root path => 127.0.0.1/start
+server.servlet.context-path=/
+server.address=127.0.0.1
+logging.charset.console=UTF-8

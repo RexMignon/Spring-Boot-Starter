@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: starter
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      connect-timeout: PT3S
+
+server:
+  port: 80
+  servlet:
+    context-path: /
+
+email:
+  user: mignon
+  code: 404
